@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "catagories",
+  "info": {
+    "singularName": "catagory",
+    "pluralName": "catagories",
+    "displayName": "Catagory"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Name": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "uid"
+    },
+    "posts": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::post.post",
+      "mappedBy": "catagory"
+    }
+  }
+}
